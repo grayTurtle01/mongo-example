@@ -6,10 +6,13 @@ require('./db-connection')
 let Post = require('./models/Post')
 
 app.get("/", async (req,res) => {
-
-    let posts = await Post.find({})
     
-    res.render("index.ejs", {posts: posts })
+    let posts = await Post.find({})
+    let first = await Post.findOne()
+    
+    res.render("index.ejs", {posts: posts,
+                             first: first
+                             })
 })
 
 
