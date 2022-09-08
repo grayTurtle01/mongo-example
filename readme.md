@@ -4,6 +4,7 @@
 		`npm install`
 		
 2. Set your mongodb-string:
+
    	in the file mongo-connection.js set the variable
    		`DB_STRING=`   
    		
